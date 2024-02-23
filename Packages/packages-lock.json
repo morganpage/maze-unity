@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.endel.nativewebsocket": {
+      "version": "https://github.com/endel/NativeWebSocket.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "c5101c07762251edc82caad9e8a39d51b1229c31"
+    },
     "com.h8man.2d.navmeshplus": {
       "version": "https://github.com/h8man/NavMeshPlus.git",
       "depth": 0,
@@ -182,6 +189,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.render-pipelines.core": {
       "version": "16.0.5",
       "depth": 1,
@@ -273,6 +287,51 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "io.liquiid.anchorlinksharp": {
+      "version": "https://github.com/liquiidio/AnchorLinkSharp.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      },
+      "hash": "fe41104585da4fbb3c3f0cf3e8338a978daae77e"
+    },
+    "io.liquiid.atomicassets": {
+      "version": "https://github.com/liquiidio/AtomicAssetsApiClient.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      },
+      "hash": "5e100f3fa6d2e4cb30ea9c115797db985813fe78"
+    },
+    "io.liquiid.eossharp": {
+      "version": "https://github.com/liquiidio/EosSharp.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      },
+      "hash": "377c67a93cf4b5a7e5a21a2cdc65108c177743e1"
+    },
+    "io.liquiid.univeralauthenticatorlibrary": {
+      "version": "https://github.com/liquiidio/UniversalAuthenticatorLibraryUnity.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      },
+      "hash": "a6456026cfe4fe453e4b810cc40087014de432ce"
+    },
+    "io.liquiid.wcwunitywebgl": {
+      "version": "https://github.com/liquiidio/WcwUnity.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      },
+      "hash": "363fc29f8304244f825edd24664b5b54e4f53a86"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
