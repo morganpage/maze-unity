@@ -9,7 +9,6 @@ public class UI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _textScore;
     [SerializeField] private GameObject _gameOverPanel;
     [SerializeField] private TextMeshProUGUI _textGameOver;
-    [SerializeField] private GameObject _player;
 
     void Awake(){
         _textScore.text = "0";
@@ -28,7 +27,7 @@ public class UI : MonoBehaviour
 
     void HandlePlayerAttacked(){
         _gameOverPanel.SetActive(true);
-        _player.SetActive(false);
+        FindAnyObjectByType<Player>(FindObjectsInactive.Include).gameObject.SetActive(false);
     }
 
     void HandleGathered(int gathered){
@@ -39,12 +38,12 @@ public class UI : MonoBehaviour
         if(totalGatherablesLeft == 0){
             _textGameOver.text = "You Win!!!";
             _gameOverPanel.SetActive(true);
-            _player.SetActive(false);
+            FindAnyObjectByType<Player>(FindObjectsInactive.Include).gameObject.SetActive(false);
         }
     }
 
     public void RestartGame(){
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainScene");
     }
 
 }

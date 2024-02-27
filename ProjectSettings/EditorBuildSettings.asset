@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/WAX/Scenes/WaxScene.unity
+    guid: 578a1bd51da204521acc89db4320bca9
+  - enabled: 1
     path: Assets/Maze/Scenes/MainScene.unity
     guid: 3f280f22e70a74b3ba8cbd907bceaa5c
   m_configObjects: {}

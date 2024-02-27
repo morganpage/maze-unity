@@ -10,9 +10,10 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float _attackRange;
     [SerializeField] float _speed;
     [SerializeField] Transform[] _wayPoints;
-    [SerializeField] Transform _player;
+    Transform _player = null;
     public int _currentWaypointIndex;
     private NavMeshAgent _agent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,13 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(_player == null)
+        {
+            _player = FindAnyObjectByType<Player>(FindObjectsInactive.Include)?.transform;
+        }
+
         float playerDistance = Vector3.Distance(_player.position,transform.position);
-        Debug.Log($"Distance:{playerDistance}");
+        //Debug.Log($"Distance:{playerDistance}");
         if(playerDistance < _attackRange){
             _agent.SetDestination(_player.position);
             if(_agent.remainingDistance < 0.5f) OnPlayerAttacked?.Invoke();

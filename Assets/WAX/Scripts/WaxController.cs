@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AtomicAssetsApiClient;
 using AtomicAssetsApiClient.Assets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UniversalAuthenticatorLibrary;
 using UniversalAuthenticatorLibrary.Src.Canvas;
@@ -49,6 +50,8 @@ public class WaxController : MonoBehaviour
             Button button = nft.GetComponent<Button>();
             button.onClick.AddListener(()=>{
                 Debug.Log(name);
+                GameController.PlayerCharacter = name;
+                SceneManager.LoadScene("MainScene");
             });
         }
     }
